@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <p>LATAM AIRLINES</p>
       <div className="row">
-        <ProductList/>
+        <ProductList />
         <div className="col-sm">
           One of three columns
         </div>
@@ -18,19 +18,21 @@ function App() {
 }
 
 
-const menuCollection = db.collection('/menu/').get()
+db.collection('/menu/').get()
   .then((snapshot) => {
+    const data = [];
     snapshot.forEach((doc) => {
-      console.log(doc.id, 'qqqq=>', doc.data());
-      return doc.id
+      data.push(doc.id);
+      console.log(data)
     });
   })
   .catch((err) => {
     console.log('Error getting documents', err);
   });
 
-const collectionsArray=[];
-collectionsArray.push(menuCollection);
 
-console.log(collectionsArray, 'aaaaaaaaaaaa')
+
+// console.log(collectionsArray, 'aaaaaaaaaaaa')
+
+
 export default App;
