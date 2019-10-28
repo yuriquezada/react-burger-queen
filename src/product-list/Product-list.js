@@ -22,9 +22,9 @@ function ProductList() {
               <a className="nav-link" id="d_Drink-tab" data-toggle="tab" href="#d_Drink" role="tab" aria-controls="d_Drink" aria-selected="false">Drink</a>
             </li>
           </ul>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="d_Sandwich" role="tabpanel" aria-labelledby="d_Sandwich-tab">Lista de sandwiches</div>
-            <div class="tab-pane fade" id="d_Drink" role="tabpanel" aria-labelledby="d_Drink-tab">Lista de bebidas</div>
+          <div className="tab-content" id="myTabContent">
+            <div className="tab-pane fade show active" id="d_Sandwich" role="tabpanel" aria-labelledby="d_Sandwich-tab">Lista de sandwiches</div>
+            <div className="tab-pane fade" id="d_Drink" role="tabpanel" aria-labelledby="d_Drink-tab">Lista de bebidas</div>
           </div>
         </div>
 
@@ -40,10 +40,10 @@ function ProductList() {
               <a className="nav-link" id="a_Drink-tab" data-toggle="tab" href="#a_Drink" role="tab" aria-controls="a_Drink" aria-selected="false">Drink</a>
             </li>
           </ul>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="a_Burger" role="tabpanel" aria-labelledby="a_Burger-tab">Lista de hamburguesas</div>
-            <div class="tab-pane fade" id="a_Accompaniment" role="tabpanel" aria-labelledby="a_Accompaniment-tab">Lista de acompañamientos</div>
-            <div class="tab-pane fade" id="a_Drink" role="tabpanel" aria-labelledby="a_Drink-tab">Lista de bebidas</div>
+          <div className="tab-content" id="myTabContent">
+            <div className="tab-pane fade show active" id="a_Burger" role="tabpanel" aria-labelledby="a_Burger-tab">Lista de hamburguesas</div>
+            <div className="tab-pane fade" id="a_Accompaniment" role="tabpanel" aria-labelledby="a_Accompaniment-tab">Lista de acompañamientos</div>
+            <div className="tab-pane fade" id="a_Drink" role="tabpanel" aria-labelledby="a_Drink-tab">Lista de bebidas</div>
           </div>
         </div>
 
