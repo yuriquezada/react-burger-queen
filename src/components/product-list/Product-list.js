@@ -37,7 +37,7 @@ function ProductList() {
               <a className="nav-link" id="a_Accompaniment-tab" data-toggle="tab" href="#a_Accompaniment" role="tab" aria-controls="a_Accompaniment" aria-selected="false">Acompañamiento</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" id="a_Drink-tab" data-toggle="tab" href="#a_Drink" role="tab" aria-controls="a_Drink" aria-selected="false">Drink</a>
+              <a className="nav-link" id="a_Drink-tab" data-toggle="tab" href="#a_Drink" role="tab" aria-controls="a_Drink" aria-selected="false">Bebidas</a>
             </li>
           </ul>
           <div className="tab-content" id="myTabContent">
