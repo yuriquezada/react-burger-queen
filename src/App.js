@@ -1,12 +1,7 @@
 import React from 'react';
 
-
-
 import './App.css';
 import ProductList from './product-list/Product-list';
-
-
-
 
 function App() {
   return (
