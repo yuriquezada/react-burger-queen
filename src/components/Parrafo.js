@@ -4,7 +4,7 @@ import db from '../config/firebase'
 
 /**------------------------------*/
 const useMessage = () => {
-  const [messages, setMessages] = useState(null);
+  const [messages, setMessages] = useState([]);
 
   useEffect(() => {
     listenForMessages();
@@ -33,6 +33,7 @@ const useMessage = () => {
 
 const Parrafo = () => {
   const messages = useMessage();
+  console.log(messages, 'es el arreglo dentro de parrafo', messages.length);
   return (
     <div className="row nuevoparrafito">
       <p>{messages}</p>
