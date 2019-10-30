@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 import ProductList from './components/product-list/Product-list';
-import Parrafo from './components/Parrafo';
+import Parrafo from './components/product-list/nav/Parrafo';
 // import db from './config/firebase'
 
 
