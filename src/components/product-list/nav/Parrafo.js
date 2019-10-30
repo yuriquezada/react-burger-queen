@@ -4,13 +4,15 @@ import useMessage from '../../../functions/useMessage'
 const Parrafo = () => {
   const messages = useMessage();
   console.log(messages, 'es el arreglo dentro de parrafo', messages.length);
+  const nav1 = messages.map((message, index) => (
+    <li key={index} className="row nuevoparrafito">
+      {message}
+    </li>
+  )
+  )
+  console.log(messages, 'el arreglo final')
   return (
-    messages.map((message, index)=> (
-      <div key={index} className="row nuevoparrafito">
-        <p>{message}</p>
-      </div>
-    )
-    )
+    <ul>{nav1}</ul>
   )
 }
 

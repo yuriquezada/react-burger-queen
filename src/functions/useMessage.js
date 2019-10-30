@@ -9,7 +9,7 @@ const useMessage = () => {
   }, []);
 
   const listenForMessages = () => {
-    db.collection('/menu/').get()
+    db.collection('menu').get()
       .then((snapshot) => {
         const data = [];
         snapshot.forEach((doc) => {

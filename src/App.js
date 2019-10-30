@@ -17,6 +17,7 @@ const App = ()=>{
           One of three columns
         </div>
       </div>
+      
       <Parrafo/>
     </div>
   );
