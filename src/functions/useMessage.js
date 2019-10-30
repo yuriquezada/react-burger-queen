@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import db from '../config/firebase'
 
+
 const useMessage = () => {
   const [messages, setMessages] = useState([]);
 
@@ -22,7 +23,7 @@ const useMessage = () => {
         console.log('Error getting documents', err);
       });
   }
-  
+  console.log(messages, 'no sé que es')
   return messages;
 }
 
