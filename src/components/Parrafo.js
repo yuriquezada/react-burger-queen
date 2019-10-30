@@ -10,15 +10,12 @@ const useMessage = () => {
     listenForMessages();
   }, []);
 
-  /*---------------------------**/
-
   const listenForMessages = () => {
     db.collection('/menu/').get()
       .then((snapshot) => {
         const data = [];
         snapshot.forEach((doc) => {
           data.push(doc.id);
-
         });
         setMessages(data);
         console.log(data, 'este es el nuevo arreglo')
@@ -27,7 +24,6 @@ const useMessage = () => {
         console.log('Error getting documents', err);
       });
   }
-
   return messages;
 }
 
@@ -35,9 +31,12 @@ const Parrafo = () => {
   const messages = useMessage();
   console.log(messages, 'es el arreglo dentro de parrafo', messages.length);
   return (
-    <div className="row nuevoparrafito">
-      <p>{messages}</p>
-    </div>
+    messages.map((message, index)=> (
+      <div key={index} className="row nuevoparrafito">
+        <p>{message}</p>
+      </div>
+    )
+    )
   )
 }
 
