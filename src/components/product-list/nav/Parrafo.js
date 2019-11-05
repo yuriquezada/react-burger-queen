@@ -9,7 +9,7 @@ const Parrafo = () => {
     <ul>
       {messages.map((message, index)=>
         <li key={index}>
-          {message.name}
+          {message.item}
         </li>
         )}
     </ul>
