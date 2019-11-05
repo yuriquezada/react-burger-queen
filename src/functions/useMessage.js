@@ -1,24 +1,24 @@
 import { useState, useEffect } from 'react';
 import db from '../config/firebase'
 
-const useMessage = () => {
+const useMessage = (path) => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    listenForMessages();
-  }, []);
+    db.collection(path)
+    .onSnapshot((snapshot) => {
+      const newMessages=snapshot.docs.map((doc)=>({
+        id: doc.id,
+        ...doc.data()
+      }))
 
-  const listenForMessages = () => {
-    db.collection('/menu/menuA/drink')
-      .onSnapshot((snapshot) => {
-        const newMessages=snapshot.docs.map((doc)=>({
-          id: doc.id,
-          ...doc.data()
-        }))
+      setMessages(newMessages);
+    })
+  }, [path]);
 
-        setMessages(newMessages);
-      })
-  }
+  // const listenForMessages = () => {
+
+  // }
   console.log(messages, 'no sé que es')
   return messages;
 }

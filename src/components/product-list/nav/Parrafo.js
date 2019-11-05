@@ -2,7 +2,7 @@ import React from 'react';
 import useMessage from '../../../functions/useMessage'
 
 const Parrafo = () => {
-  const messages = useMessage();
+  const messages = useMessage('/menu/menuA/drink');
   console.log(messages, 'es el arreglo dentro de parrafo', messages.length);
   // console.log(messages.category);
   return (
