@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 import ProductList from './components/product-list/Product-list';
-import Parrafo from './components/product-list/nav/Parrafo';
+import Nav1 from './components/product-list/nav/Nav1';
 // import db from './config/firebase'
 
 
@@ -17,7 +17,7 @@ const App = ()=>{
           One of three columns
         </div>
       </div>
-      <Parrafo/>
+      <Nav1/>
     </div>
   );
 }
