@@ -11,13 +11,18 @@ const useMessage = () => {
   const listenForMessages = () => {
     db.collection('menu')
       .onSnapshot((snapshot) => {
-        const data = [];
-        snapshot.forEach((doc) => {
-          data.push(doc.id);
-        });
-        setMessages(data);
-        // console.log(data, 'este es el nuevo arreglo')
-      }, (error) => console.error(error))
+        const newMessages=snapshot.docs.map((doc)=>({
+          id: doc.id,
+          ...doc.data()
+        }))
+
+        // const data = [];
+        // snapshot.forEach((doc) => {
+        //   data.push(doc.id);
+        // });
+        setMessages(newMessages);
+        // // console.log(data, 'este es el nuevo arreglo')
+      })
   }
   console.log(messages, 'no sé que es')
   return messages;
