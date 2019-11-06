@@ -1,5 +1,5 @@
 import React from 'react';
-import useMessage from '../../../functions/useMessage'
+import useMessage from '../../functions/useMessage'
 
 const Product = () => {
   const messages = useMessage('/menu/menuA/sandwich');

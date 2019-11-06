@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 import ProductList from './components/product-list/Product-list';
-import Product from './components/product-list/nav/Product';
+import Product from './components/product-list/Product';
 // import db from './config/firebase'
 
 
