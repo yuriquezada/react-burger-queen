@@ -1,12 +1,13 @@
 import React from 'react';
 import useMessage from '../../functions/use-message'
+import addOrder from '../../functions/push-order'
 
 const Product = (props) => {
   const messages = useMessage(props.path);
   console.log(messages, 'es el arreglo dentro de Product', messages.length);
   return (
       messages.map((message, index) =>
-        <div className="card"  key={index}>
+        <div className="card" onClick={addOrder} key={index}>
           <img src="..." className="card-img-top" alt="..."/>
             <div className="card-body">
               <h5 className="card-title">{message.item}</h5>
