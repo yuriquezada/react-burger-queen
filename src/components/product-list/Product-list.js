@@ -23,8 +23,8 @@ function ProductList() {
             </li>
           </ul>
           <div className="tab-content" id="myTabContent">
-            <div className="tab-pane fade show active" id="d_Sandwich" role="tabpanel" aria-labelledby="d_Sandwich-tab"><Product/></div>
-            <div className="tab-pane fade" id="d_Drink" role="tabpanel" aria-labelledby="d_Drink-tab">Lista de bebidas</div>
+            <div className="tab-pane fade show active" id="d_Sandwich" role="tabpanel" aria-labelledby="d_Sandwich-tab">Lista de sandwiches</div>
+            <div className="tab-pane fade" id="d_Drink" role="tabpanel" aria-labelledby="d_Drink-tab"><Product name={'/menu/menuA/drink'}/></div>
           </div>
         </div>
 

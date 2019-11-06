@@ -1,8 +1,8 @@
 import React from 'react';
 import useMessage from '../../functions/useMessage'
 
-const Product = () => {
-  const messages = useMessage('/menu/menuA/sandwich');
+const Product = (props) => {
+  const messages = useMessage(props.name);
   console.log(messages, 'es el arreglo dentro de Product', messages.length);
   return (
       messages.map((message, index) =>
