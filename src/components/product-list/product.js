@@ -1,5 +1,5 @@
 import React from 'react';
-import useMessage from '../../functions/useMessage'
+import useMessage from '../../functions/use-message'
 
 const Product = (props) => {
   const messages = useMessage(props.path);

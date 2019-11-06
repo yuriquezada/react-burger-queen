@@ -1,7 +1,8 @@
 import React from 'react';
 
 import './App.css';
-import ProductList from './components/product-list/Product-list';
+import ProductList from './components/product-list/product-list';
+import OrderList from './components/product-order/order-list';
 // import Product from './components/product-list/Product';
 // import db from './config/firebase'
 
@@ -10,12 +11,10 @@ import ProductList from './components/product-list/Product-list';
 const App = ()=>{
     return (
     <div className="App">
-      <p>LATAM AIRLINES</p>
+      <p>BURGER QUEEN</p>
       <div className="row">
         <ProductList />
-        <div className="col-sm">
-          One of three columns
-        </div>
+        <OrderList />
       </div>
     </div>
   );
