@@ -1,6 +1,6 @@
 import React from 'react';
 import useMessage from '../../functions/use-message'
-import addOrder from '../../functions/push-order'
+import addOrder from '../../functions/add-order'
 
 const Product = (props) => {
   const messages = useMessage(props.path);
