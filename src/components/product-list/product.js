@@ -13,9 +13,9 @@ const Product = (props) => {
           <div className="card-body">
             <h5 className="card-title">{message.item}</h5>
           </div>
-          <div className="card-footer">
-            <small className="text-muted">Last updated 3 mins ago</small>
-            <a href="https://github.com/" className="btn btn-primary">Go somewhere</a>
+          <div className="card-footer d-flex justify-content-center flex-column align-items-center">
+          <h5 className="card-title">$ {message.price}</h5>
+            <a href="https://github.com/" className="btn btn-primary">Add</a>
           </div>
         </div>
       )
