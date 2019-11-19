@@ -6,14 +6,13 @@ const Product = (props) => {
   const messages = useMessage(props.path);
   console.log(messages, 'es el arreglo dentro de Product', messages.length);
 
-  const [name, setName] = useState({firstName: ''});
+  const [name, setName] = useState({firstName: '', price: ''});
   console.log(name)
-
 
   return (
     <div className="row ml-0 mr-0 py-3 px-4">{
       messages.map((message) =>
-      <div className="p-3 col-xl-4 col-lg-6 col-md-6" value={name} onClick={()=>setName({firstName: message.item})} key={message.item} id={message.item}>
+      <div className="p-3 col-xl-4 col-lg-6 col-md-6" value={name} onClick={()=>setName({firstName: message.item, price: message.price})} key={message.item} id={message.item}>
         <div className="card ">
           <img src={message.image} className="card-img-top" alt="..." />
           <div className="card-body">
