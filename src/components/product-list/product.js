@@ -6,16 +6,14 @@ const Product = (props) => {
   const messages = useMessage(props.path);
   console.log(messages, 'es el arreglo dentro de Product', messages.length);
 
-  const [name, setName] = useState("Agata");
-  function handleNameChange(e) {
-    setName(e.target.value="aaaaaaaagata2");
-  }
+  const [name, setName] = useState({firstName: ''});
+  console.log(name)
 
 
   return (
     <div className="row ml-0 mr-0 py-3 px-4">{
       messages.map((message) =>
-      <div className="p-3 col-xl-4 col-lg-6 col-md-6" value={name} onClick={handleNameChange} key={message.item} id={message.item}>
+      <div className="p-3 col-xl-4 col-lg-6 col-md-6" value={name} onClick={()=>setName({firstName: message.item})} key={message.item} id={message.item}>
         <div className="card ">
           <img src={message.image} className="card-img-top" alt="..." />
           <div className="card-body">
@@ -29,7 +27,6 @@ const Product = (props) => {
         </div>
       )
     }</div>
-
   );
 };
 export default Product;
