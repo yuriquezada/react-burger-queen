@@ -7,9 +7,9 @@ const Product = (props) => {
   console.log(messages, 'es el arreglo dentro de Product', messages.length);
   return (
     <div className="row ml-0 mr-0 py-3 px-4">{
-      messages.map((message, index) =>
-      <div className="p-3 col-xl-4 col-lg-6 col-md-6">
-        <div className="card " onClick={handleClick} key={index}>
+      messages.map((message) =>
+      <div className="p-3 col-xl-4 col-lg-6 col-md-6" onClick={handleClick} key={message.item}>
+        <div className="card ">
           <img src={message.image} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{message.item}</h5>
